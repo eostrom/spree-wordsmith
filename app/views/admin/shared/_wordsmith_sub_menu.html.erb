@@ -2,8 +2,7 @@
   <ul id="sub_nav">
     <% hook :admin_product_sub_tabs do %>
       <%= tab :wordsmith_settings %>
-      <%= tab :posts %>
-      <%= tab :view_blog, :route => :posts, :css_class => 'last' %>
+      <%= tab :posts, :css_class => 'last' %>
     <% end %>
   </ul>
 <% end %>
