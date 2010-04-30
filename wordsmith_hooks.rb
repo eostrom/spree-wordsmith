@@ -41,7 +41,7 @@ class WordsmithHooks < Spree::ThemeSupport::HookListener
   #
 
   insert_after :admin_tabs do
-    %(<%=  tab(:wordsmith, :label => t("Wordsmith"), :route => :admin_posts)  %>)
+    %(<%= tab :posts, :wordsmith_settings, :blog, :label => 'wordsmith' %>)
   end
   
   insert_after :admin_user_form_fields, "admin/users/display_name"

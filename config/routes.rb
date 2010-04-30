@@ -1,4 +1,3 @@
-
 map.resources :posts, :as => Spree::Config[:wordsmith_permalink]
 map.tag_posts "#{Spree::Config[:wordsmith_permalink]}/tags/:tag_name", :controller => 'posts', :action => 'tags'
 

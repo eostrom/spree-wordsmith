@@ -1,8 +1,10 @@
+<%= render :partial => 'admin/shared/configuration_menu' %>
 <%= render :partial => 'admin/shared/wordsmith_sub_menu' %>
 
 <h1><%= t("posts") %></h1>
 
-<table>
+<table class="index">
+  <thead>
   <tr>
     <th>Post</th>
     <th>Author</th>    
@@ -10,6 +12,8 @@
     <th>Comments</th>
     <th>Date</th>
   </tr>
+  </thead>
+  <tbody>
   <% for post in @posts %>
     <tr>
       <td><%= link_to h(post.title), [:edit,:admin,post] %> (<%= post.is_active == 1 ? t("published") : t("draft") %>) </td>      
@@ -20,6 +24,7 @@
 
     </tr>
   <% end %>
+  </tbody>
 </table>
 
 <p><%= link_to t("new-post"), new_admin_post_path %></p>
