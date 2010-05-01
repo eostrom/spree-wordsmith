@@ -30,7 +30,7 @@ class WordsmithExtension < Spree::Extension
 
     # make your helper avaliable in all views
     Spree::BaseController.class_eval do
-      helper WordsmithHelper          
+      helper WordsmithHelper    
       
       # Returns post.title for use in the <title> element. 
       def title_with_wordsmith_post_check

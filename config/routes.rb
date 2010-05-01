@@ -4,4 +4,4 @@ map.tag_posts "#{Spree::Config[:wordsmith_permalink]}/tags/:tag_name", :controll
 map.namespace :admin do |admin|
   admin.resource :wordsmith_settings
   admin.resources :posts
-end  
+end
